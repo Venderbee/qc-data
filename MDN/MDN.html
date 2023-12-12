@@ -1,0 +1,1107 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Required for responsive websites -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="assets\js\React\Component\ReactDataTable.js" type='text/babel'></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+  <script src="https://kit.fontawesome.com/fdb30c34c1.js" crossorigin="anonymous"></script>
+  <title>Mobile Data Narrative</title>
+  <link rel='stylesheet' href='style.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* #message {
+            font-size: 50px;
+            letter-spacing: 10px;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        #array {
+            font-size: 50px;
+            letter-spacing: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        #button {
+            border: none;
+            border-radius: 5px;
+            height: 50px;
+            background-color: #10708b;
+            font-size: 20px;
+            color: white;
+            transition: 0.2s;
+            box-shadow: 0 9px lightgray;
+        }
+
+        #button:active {
+            box-shadow: 0 5px lightgray;
+            transform: translateY(4px);
+        }
+
+        h1 {
+            font-size: 75px;
+        } */
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body class="boyoboy">
+  <div class='row'>
+    <div class='col-12'>
+      <p class="bigboy">
+        QuartzCraft Statistics
+      </p>
+    </div>
+
+  </div>
+  <div class='row'>
+    <div class='col-12'>
+      <img src="borderthing.png" class="thing">
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-4'>
+      <img src="ag.png" class="thing">
+    </div>
+    <div class='col-4'>
+      <img src="aw.png" class="thing">
+    </div>
+    <div class='col-4'>
+      <img src="as.png" class="thing">
+    </div>
+
+  </div>
+
+  <div class='row'>
+    <div class='col-12'>
+      <img src="borderthing.png" class="thing">
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-3'>
+      <p class="label">How many pumpkin pies has the server eaten?</p>
+      <img src="pumpkin.png" class="pie">
+      <p class="label">not enough</p>
+
+      <div class="wowa"><i class="fa-solid fa-stroopwafel fa-3x"></i></div>
+
+    </div><!-- 25% -->
+    <div class='col-6'>
+      <p class="words">
+        QuartzCraft is a public, semi-vanilla, all inclusive Minecraft server. I’ve been playing on it for a bit
+        over a year at this point, so I knew I’d spent enough time on it to gather a large amount of data. There
+        have been 666 unique players, and lots of incredible builds, with a wide variety of palettes and styles,
+        so my data would be widespread and full of variety.
+      </p>
+      <p class="words">
+        I wanted to answer a few questions, such as what block was mined the most, or what the favorite food of
+        the server was. Mostly though I was just curious to see what all would come out of the survey. (see
+        right)
+      </p>
+      <p class="words">
+        So I sent out a survey to the server, excited to see the responses that would come in. Meanwhile, I went
+        to collect my own data, using the statistics sheet in the minecraft menu, which was a great tool for
+        this project, since the game automatically collects data as you play, and it just needed to be entered
+        into the sheet. I was very surprised to find I had never killed the enderdragon on the server, so I did
+        go do that before I submitted my data.
+      </p>
+      <div class="wowa"><i class="fa-solid fa-dragon fa-3x"></i></div>
+
+      <p class="words">
+        There were many interesting results from the data collected, such as one of the top items being picked up was
+        raw beef, with a number up in the thousands. Also, pumpkin pies were one of the least common foods eaten, with
+        the highest number being 184 pies eaten. Oddly enough though one participant had crafted over 1200 pies.
+
+      </p>
+    </div><!-- 75% -->
+    <div class='col-3'>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSerl7jQnGCSsayxdR5pnxb1vwk2wdNMNknH25fdTXjzUtWBdw/viewform?embedded=true"
+        width=100% height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    </div><!-- 25% -->
+  </div>
+  <div class='row'>
+    <div class='col-12'>
+      <img src="borderthing.png" class="thing">
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-3'>
+      <img src="ad.png">
+    </div>
+    <div class='col-3'>
+      <img src="image.png">
+    </div>
+    <div class='col-3'>
+      <img src="image-7.png">
+    </div>
+    <div class='col-3'>
+      <img src="unknown_3.png">
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-12'>
+      <img src="borderthing.png" class="thing">
+    </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-5'>
+        <p class="label">Top Stats</p>
+        <div id="my_dataviz"></div>
+
+      </div>
+      <div class='col-2'>
+        <p class="words">The circular packing table shows some of the top stats, such as the most picked up item, or the
+          most broken tool.</p>
+        <p class='words'>The circle colors corespond with the following:</p>
+        <div>
+          <div class="box square1 words">Crafted Items</div>
+        </div>
+        <div>
+          <div class="box mama2 words">Picked Up Items</div>
+        </div>
+        <div>
+          <div class="box mama3 words">Dropped Items</div>
+        </div>
+        <div>
+          <div class="box mama4 words">Broken Tools</div>
+        </div>
+        <div>
+          <div class="box mama5 words">Placed Blocks</div>
+        </div>
+        <br>
+
+        <p class="words">The lolipop chart shoes the top rank of each job on the server.</p>
+      </div>
+      <div class='col-5'>
+        <p class="label">
+          Top Job Stats
+        </p>
+        <div id="my_dataviz2"></div>
+      </div>
+    </div>
+   
+    <div class='row'>
+      <div class='col-12'>
+        <img src="borderthing.png" class="thing">
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-3'>
+        <img src="av.png">
+      </div>
+      <div class='col-3'>
+        <img src="ar.png">
+      </div>
+      <div class='col-3'>
+        <img src="an.png">
+      </div>
+      <div class='col-3'>
+        <img src="at.png">
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-12'>
+        <img src="borderthing.png" class="thing">
+      </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-5'>
+          <p class="label"><i class="fa-solid fa-seedling"></i>Flowers of QC<i class="fa-solid fa-wheat-awn"></i></p>
+
+          <div id="my_dataviz3"></div>
+        </div>
+        <div class='col-2'>
+          <p class="words">The circular barplot was stylized to resemble a flower because it is displaying the top
+            flowers
+            and how often they’ve been used, with roses being the most used flower, followed by poppies. Looks like the
+            server is a fan of red flowers!</p>
+          <p class="words">Not all of the stats had a variety of answers, in fact some stats all had the same answer!
+            The
+            violin chart shows this, with the block mined the most being stone, and the tool used the most being a
+            netherite pickaxe! Very fancy tool for a very common block.</p>
+        </div>
+        <div class='col-5'>
+          <div id="my_dataviz4"></div>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-12'>
+        <img src="borderthing.png" class="thing">
+      </div>
+      </div>
+      <div class='row'>
+        <div class='col-12'>
+          <p class="label">Curious about your own statistics? check them out and see how they compare!</p>
+        </div>
+        </div>
+        <div class='row'>
+          <div class='col-2'></div>
+          <div class='col-8'>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/7fIAhC8TYro?si=9Sx1drVTp7Bm9EvQ"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class='col-2'></div>
+        </div>
+        <div class='row'>
+          <div class='col-12'>
+            <img src="borderthing.png" class="thing">
+          </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class='col-12'>
+                <div id="react-data-table"></div>
+              </div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-12'>
+              <img src="borderthing.png" class="thing">
+            </div>
+
+          </div>
+          <script>
+
+            // set the dimensions and margins of the graph
+            var width = 460
+            var height = 460
+
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_dataviz")
+              .append("svg")
+              .attr("width", width)
+              .attr("height", height)
+
+            // Read data
+            // moogie is the stat type, cookie is the relevant object, wiggle is the next part of the stat
+            let data = [
+              {
+                moogie: "Crafted",
+                wiggle: "Item",
+                cookie: "Gray Carpet",
+                value: 20871,
+              },
+              {
+                moogie: "Picked Up",
+                wiggle: "Item",
+                cookie: "Stone",
+                value: 424963,
+              },
+              {
+                moogie: "Dropped",
+                wiggle: "Item",
+                cookie: "Stone",
+                value: 16298,
+              },
+              {
+                moogie: "Broken",
+                wiggle: "Tool",
+                cookie: "Shovel",
+                value: 2,
+              },
+              {
+                moogie: "Placed",
+                wiggle: "Block",
+                cookie: "Grass Block",
+                value: 31005,
+              },
+              //line break
+              {
+                moogie: "Crafted",
+                wiggle: "Item",
+                cookie: "Spruce Planks",
+                value: 15064,
+              },
+              {
+                moogie: "Picked Up",
+                wiggle: "Item",
+                cookie: "Stone",
+                value: 454154,
+              },
+              {
+                moogie: "Dropped",
+                wiggle: "Item",
+                cookie: "Stone",
+                value: 21027,
+              },
+              {
+                moogie: "Broken",
+                wiggle: "Tool",
+                cookie: "Stone Pickaxe",
+                value: 23,
+              },
+              {
+                moogie: "Placed",
+                wiggle: "Block",
+                cookie: "Stone",
+                value: 51260,
+              },
+              //line break
+              {
+                moogie: "Crafted",
+                wiggle: "Item",
+                cookie: "Glass Pane",
+                value: 97148,
+              },
+              {
+                moogie: "Picked Up",
+                wiggle: "Item",
+                cookie: "Cobbled Deepslate",
+                value: 660451,
+              },
+              {
+                moogie: "Dropped",
+                wiggle: "Item",
+                cookie: "Cobbled Deepslate",
+                value: 37655,
+              },
+              {
+                moogie: "Broken",
+                wiggle: "Tool",
+                cookie: "Iron Axe",
+                value: 13,
+              },
+              {
+                moogie: "Placed",
+                wiggle: "Block",
+                cookie: "Cobbled Deepslate",
+                value: 34985,
+              },
+              //line break
+              {
+                moogie: "Crafted",
+                wiggle: "Item",
+                cookie: "Leather Tunic",
+                value: 24,
+              },
+              {
+                moogie: "Picked Up",
+                wiggle: "Item",
+                cookie: "Cobblestone",
+                value: 11731,
+              },
+              {
+                moogie: "Dropped",
+                wiggle: "Item",
+                cookie: "Raw Beef",
+                value: 1624,
+              },
+              {
+                moogie: "Placed",
+                wiggle: "Block",
+                cookie: "Red Wool",
+                value: 37983,
+              },
+              //line break
+              {
+                moogie: "Crafted",
+                wiggle: "Item",
+                cookie: "Glass",
+                value: 12035,
+              },
+              {
+                moogie: "Picked Up",
+                wiggle: "Item",
+                cookie: "Stone",
+                value: 34243,
+              },
+              {
+                moogie: "Dropped",
+                wiggle: "Item",
+                cookie: "Stone",
+                value: 4358,
+              },
+              {
+                moogie: "Broken",
+                wiggle: "Tool",
+                cookie: "Wooden Shovel",
+                value: 15,
+              },
+              {
+                moogie: "Placed",
+                wiggle: "Block",
+                cookie: "Dirt",
+                value: 10277,
+              },
+              //line break
+              {
+                moogie: "Crafted",
+                wiggle: "Item",
+                cookie: "Bonemeal",
+                value: 167999,
+              },
+              {
+                moogie: "Picked Up",
+                wiggle: "Item",
+                cookie: "Stone",
+                value: 433851,
+              },
+              {
+                moogie: "Dropped",
+                wiggle: "Item",
+                cookie: "Bedrock",
+                value: 1,
+              },
+              {
+                moogie: "Broken",
+                wiggle: "Tool",
+                cookie: "Golden Leggings",
+                value: 7,
+              },
+              {
+                moogie: "Broken",
+                wiggle: "Tool",
+                cookie: "Iron Pickaxe",
+                value: 6,
+              },
+              {
+                moogie: "Placed",
+                wiggle: "Block",
+                cookie: "White Stained Glass",
+                value: 17352,
+              },
+              //line break
+              {
+                moogie: "Crafted",
+                wiggle: "Item",
+                cookie: "Spruce Planks",
+                value: 14424,
+              },
+              {
+                moogie: "Picked Up",
+                wiggle: "Item",
+                cookie: "Raw Beef",
+                value: 107292,
+              },
+              {
+                moogie: "Dropped",
+                wiggle: "Item",
+                cookie: "Cobblestone",
+                value: 13209,
+              },
+              {
+                moogie: "Broken",
+                wiggle: "Tool",
+                cookie: "Shears",
+                value: 3,
+              },
+              {
+                moogie: "Placed",
+                wiggle: "Block",
+                cookie: "Dirt",
+                value: 91232,
+              },
+              //line break
+            ]
+
+
+
+            // Filter a bit the data -> more than 1 million inhabitants
+            //data = data.filter(function (d) { return d.value > 10000000 })
+
+            // Color palette for continents?
+            var color = d3.scaleOrdinal()
+              .domain(["Crafted", "Picked Up", "Dropped", "Broken", "Placed"])
+              .range(["#98029a", "#d0007f", "#f2005e", "#ff4b3a", "#ff7e00"]);
+
+            // Size scale for countries
+            var size = d3.scaleLinear()
+              .domain([0, 700000])
+              .range([7, 55])  // circle will be between 7 and 55 px wide
+
+            // create a tooltip
+            var Tooltip = d3.select("#my_dataviz")
+              .append("div")
+              .style("opacity", 0)
+              .attr("class", "tooltip")
+              .style("background-color", "white")
+              .style("border", "solid")
+              .style("border-width", "2px")
+              .style("border-radius", "5px")
+              .style("padding", "5px")
+
+            // Three function that change the tooltip when user hover / move / leave a cell
+            var mouseover = function (d) {
+              Tooltip
+                .style("opacity", 1)
+            }
+            var mousemove = function (d) {
+              Tooltip
+                .html('<b>' + "Most " + d.moogie + " " + d.wiggle + '</b>' + "<br>" + '<u>' + d.cookie + '</u>' + "<br>" + d.value)
+                .style("left", (d3.mouse(this)[0] + 20) + "px")
+                .style("top", (d3.mouse(this)[1]) + "px")
+            }
+            var mouseleave = function (d) {
+              Tooltip
+                .style("opacity", 0)
+            }
+
+            // Initialize the circle: all located at the center of the svg area
+            var node = svg.append("g")
+              .selectAll("circle")
+              .data(data)
+              .enter()
+              .append("circle")
+              .attr("class", "node")
+              .attr("r", function (d) { return size(d.value) })
+              .attr("cx", width / 2)
+              .attr("cy", height / 2)
+              .style("fill", function (d) { return color(d.moogie) })
+              .style("fill-opacity", 0.8)
+              .attr("stroke", "black")
+              .style("stroke-width", 1)
+              .on("mouseover", mouseover) // What to do when hovered
+              .on("mousemove", mousemove)
+              .on("mouseleave", mouseleave)
+              .call(d3.drag() // call specific function when circle is dragged
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+
+            // Features of the forces applied to the nodes:
+            var simulation = d3.forceSimulation()
+              .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+              .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
+              .force("collide", d3.forceCollide().strength(.2).radius(function (d) { return (size(d.value) + 3) }).iterations(1)) // Force that avoids circle overlapping
+
+            // Apply these forces to the nodes and update their positions.
+            // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+            simulation
+              .nodes(data)
+              .on("tick", function (d) {
+                node
+                  .attr("cx", function (d) { return d.x; })
+                  .attr("cy", function (d) { return d.y; })
+              });
+
+            // What happens when a circle is dragged?
+            function dragstarted(d) {
+              if (!d3.event.active) simulation.alphaTarget(.03).restart();
+              d.fx = d.x;
+              d.fy = d.y;
+            }
+            function dragged(d) {
+              d.fx = d3.event.x;
+              d.fy = d3.event.y;
+            }
+            function dragended(d) {
+              if (!d3.event.active) simulation.alphaTarget(.03);
+              d.fx = null;
+              d.fy = null;
+            }
+
+
+
+          </script>
+          <script>
+
+            // set the dimensions and margins of the graph
+            var margin = { top: 10, right: 30, bottom: 40, left: 100 },
+              width = 460 - margin.left - margin.right,
+              height = 500 - margin.top - margin.bottom;
+
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_dataviz2")
+              .append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+
+              .append("g")
+              .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+            // Parse the Data
+            let tiptop = [
+              {
+                stat: "crafter",
+                level: 24
+              },
+              {
+                stat: "woodcutter",
+                level: 51
+              },
+              {
+                stat: "builder",
+                level: 70
+              },
+              {
+                stat: "explorer",
+                level: 79
+              },
+              {
+                stat: "brewer",
+                level: 17
+              },
+              {
+                stat: "weaponsmith",
+                level: 37
+              },
+              {
+                stat: "fisherman",
+                level: 39
+              },
+              {
+                stat: "digger",
+                level: 45
+              },
+              {
+                stat: "miner",
+                level: 140
+              },
+              {
+                stat: "enchanter",
+                level: 18
+              },
+              {
+                stat: "farmer",
+                level: 75
+              },
+              {
+                stat: "hunter",
+                level: 71
+              }
+            ]
+
+            // Add X axis
+            var x = d3.scaleLinear()
+              .domain([0, 150])
+              .range([0, width]);
+            // svg.append("g")
+            //   .attr("transform", "translate(0," + height + ")");
+            //.call(d3.axisBottom(x))
+            //   .selectAll(".domain")
+            //   .style("stroke", "orange");
+            // svg.append("g")
+            //   .call(d3.axisBottom(x))
+            //   .selectAll("text")
+            //   .attr("transform", "translate(-10,0)rotate(-45)")
+            //   .style("text-anchor", "end")
+            //   .style("fill", "red")
+            //   .style("font-family", "verdana");
+
+            let xAxis = svg.append("g")
+              .call(d3.axisBottom(x))
+              .attr("transform", "translate(0," + height + ")");;
+
+            xAxis.selectAll(".domain")
+              .style("stroke", "purple");
+
+            xAxis.selectAll("text")
+              .attr("transform", "translate(-10,0)rotate(-45)")
+              .style("text-anchor", "end")
+              .style("fill", "#CA75E3")
+              .style("font-family", "verdana");
+
+
+            // Y axis
+            var y = d3.scaleBand()
+              .range([0, height])
+              .domain(tiptop.map(function (d) { return d.stat; }))
+              .padding(1);
+
+            // Three function that change the tooltip when user hover / move / leave a cell
+            var mouseover = function (d) {
+              Tooltip
+                .style("opacity", 1)
+            }
+            var mousemove = function (d) {
+              Tooltip
+                .html('<b>' + d.level + '</b>')
+                .style("left", (d3.mouse(this)[0] + 20) + "px")
+                .style("top", (d3.mouse(this)[1]) + "px")
+                .style("align", "right")
+            }
+            var mouseleave = function (d) {
+              Tooltip
+                .style("opacity", 0)
+            }
+
+            //Creating a unique variable for the y-axis
+            let yAxis = svg.append("g")
+              .call(d3.axisLeft(y));
+
+            //Changing the color of the y-axis to be purple
+            yAxis.selectAll(".domain")
+              .style("stroke", "purple");
+
+            yAxis.selectAll("text")
+              .style("fill", "#CA75E3")
+              .style("font-family", "verdana");
+
+            // Lines
+            svg.selectAll("myline")
+              .data(tiptop)
+              .enter()
+              .append("line")
+              .attr("x1", function (d) { return x(d.level); })
+              .attr("x2", x(0))
+              .attr("y1", function (d) { return y(d.stat); })
+              .attr("y2", function (d) { return y(d.stat); })
+              .attr("stroke", "#ce6dfa")
+
+            // Circles
+            var node2 = svg.append("g")
+              .selectAll("mycircle")
+              .data(tiptop)
+              .enter()
+              .append("circle")
+              .attr("class", "node")
+              .attr("cx", function (d) { return x(d.level); })
+              .attr("cy", function (d) { return y(d.stat); })
+              .attr("r", "4")
+              .style("fill", "purple")
+              .attr("stroke", "#110019")
+              .on("mouseover", mouseover) // What to do when hovered
+              .on("mousemove", mousemove)
+              .on("mouseleave", mouseleave)
+
+
+          </script>
+
+          <script>
+
+            // set the dimensions and margins of the graph
+            var margin = { top: 10, right: 10, bottom: 100, left: 10 },
+              width = 460 - margin.left - margin.right,
+              height = 460 - margin.top - margin.bottom,
+              innerRadius = 30,
+              outerRadius = Math.min(width, height) / 2;   // the outerRadius goes from the middle of the SVG area to the border
+
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_dataviz3")
+              .append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform", "translate(" + width / 2 + "," + (height / 2 + 100) + ")"); // Add 100 on Y translation, cause upper bars are longer
+
+            let flor = [
+              {
+                flower: "Sweet Berry Bush",
+                amount: 25,
+                color: "#A50101",
+              },
+              {
+                flower: "Poppy",
+                amount: 70,
+                color: "#FF1F1F",
+              },
+              {
+                flower: "Rose",
+                amount: 46,
+                color: "#EE0B49",
+              },
+              {
+                flower: "Lilac",
+                amount: 94,
+                color: "#CA75E3",
+              },
+              {
+                flower: "Rose ",
+                amount: 164,
+                color: "#EE0B49",
+              },
+              {
+                flower: "Poppy ",
+                amount: 128,
+                color: "#FF1F1F",
+              },
+              {
+                flower: "Lilac ",
+                amount: 41,
+                color: "#CA75E3",
+              }
+            ]
+
+            // X scale
+            var x = d3.scaleBand()
+              .range([0, 2 * Math.PI])    // X axis goes from 0 to 2pi = all around the circle. If I stop at 1Pi, it will be around a half circle
+              .align(0)                  // This does nothing ?
+              .padding(0.1)
+              .domain(flor.map(function (d) { return d.flower; })); // The domain of the X axis is the list of states.
+
+
+            // Y scale
+            var y = d3.scaleRadial()
+              .range([innerRadius, outerRadius])   // Domain will be define later.
+              .domain([0, 200]); // Domain of Y is from 0 to the max seen in the data
+
+            var color2 = d3.scaleOrdinal()
+              .domain(["Sweet Berry Bush", "Poppy", "Rose", "Lilac", "Rose ", "Poppy ", "Lilac "])
+              .range(["#A50101", "#FF1F1F", "#EE0B49", "#CA75E3", "#EE0B49", "#FF1F1F", "#CA75E3"]);
+
+
+
+            // Add bars
+            svg.append("g")
+              .selectAll("path")
+              .data(flor)
+              .enter()
+              .append("path")
+              .style("fill", function (d) { return color2(d.flower) })
+              .attr("stroke", "black")
+              .attr("d", d3.arc()     // imagine your doing a part of a donut plot
+                .innerRadius(innerRadius)
+                .outerRadius(function (d) { return y(d.amount); })
+                .startAngle(function (d) { return x(d.flower); })
+                .endAngle(function (d) { return x(d.flower) + x.bandwidth(); })
+                .padAngle(0.01)
+                .padRadius(innerRadius))
+
+
+
+            svg.append("g")
+              .selectAll("g")
+              .data(flor)
+              .enter()
+              .append("g")
+              .attr("text-anchor", function (d) { return (x(d.flower) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "end" : "start"; })
+              .attr("transform", function (d) { return "rotate(" + ((x(d.flower) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")" + "translate(" + (y(d.amount) + 10) + ",0)"; })
+              .append("text")
+              .text(function (d) { return (d.flower) })
+              .attr("transform", function (d) { return (x(d.flower) + x.bandwidth() / 2 + Math.PI) % (2 * Math.PI) < Math.PI ? "rotate(180)" : "rotate(0)"; })
+              .style("font-size", "15px")
+              .attr("stroke-width", ".5")
+              .attr("stroke", "#E8E8E8")
+              .attr("fill", "#9E94A3")
+              .attr("alignment-baseline", "middle")
+
+              ;
+
+          </script>
+
+          <script>
+
+            // set the dimensions and margins of the graph
+            var margin = { top: 30, right: 30, bottom: 30, left: 40 },
+              width = 460 - margin.left - margin.right,
+              height = 460 - margin.top - margin.bottom;
+
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_dataviz4")
+              .append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+            // Read the data and compute summary statistics for each specie
+            let beep = [
+              {
+                top: "block",
+                block: "Stone",
+                amount: 60648,
+              },
+              {
+                top: "block",
+                block: "Stone",
+                amount: 865034,
+              },
+              {
+                top: "block",
+                block: "Stone",
+                amount: 1308343,
+              },
+              {
+                top: "block",
+                block: "Stone",
+                amount: 147699,
+              },
+              {
+                top: "block",
+                block: "Stone",
+                amount: 468188,
+              },
+              {
+                top: "block",
+                block: "Stone",
+                amount: 37043,
+              },
+              {
+                top: "block",
+                block: "Stone",
+                amount: 437366,
+              },
+              {
+                top: "tool",
+                block: "Netherite Pick",
+                amount: 447987,
+              },
+              {
+                top: "tool",
+                block: "Netherite Pick",
+                amount: 695214,
+              },
+              {
+                top: "tool",
+                block: "Netherite Pick",
+                amount: 2711036,
+              },
+              {
+                top: "tool",
+                block: "Netherite Pick",
+                amount: 93244,
+              },
+              {
+                top: "tool",
+                block: "Netherite Pick",
+                amount: 138601,
+              },
+              {
+                top: "tool",
+                block: "Netherite Pick",
+                amount: 870517,
+              },
+              {
+                top: "tool",
+                block: "Netherite Pick",
+                amount: 311372,
+              }
+            ]
+            {
+
+              // Build and Show the Y scale
+              var y = d3.scaleLinear()
+                .domain([1000, 500000])          // Note that here the Y scale is set manually
+                .range([height, 0])
+
+              let yAxis2 = svg.append("g")
+                .attr("transform", "translate(10)")
+                .call(d3.axisLeft(y));
+
+              yAxis2.selectAll(".domain")
+                .style("stroke", "purple");
+
+
+              yAxis2.selectAll("text")
+                .style("fill", "#9E94A3")
+                .style("font-family", "verdana");
+
+              // Build and Show the X scale. It is a band scale like for a boxplot: each group has an dedicated RANGE on the axis. This range has a length of x.bandwidth
+              var x = d3.scaleBand()
+                .range([0, width])
+                .domain(["Stone", "Netherite Pick"])
+                .padding(0.3)     // This is important: it is the space between 2 groups. 0 means no padding. 1 is the maximum.
+
+              let xAxis2 = svg.append("g")
+                .call(d3.axisBottom(x))
+                .attr("transform", "translate(0," + height + ")");;
+
+              xAxis2.selectAll(".domain")
+                .style("stroke", "purple");
+
+              xAxis2.selectAll("text")
+                //.attr("transform", "translate(-10,0)rotate(-45)")
+                // .style("text-anchor", "end")
+                .style("fill", "#9E94A3")
+                .style("font-family", "verdana");
+
+              var q = d3.scaleBand()
+                .range([0, width])
+                .domain(["Most Mined Block", "Most Used Tool"])
+                .padding(0.5)     // This is important: it is the space between 2 groups. 0 means no padding. 1 is the maximum.
+
+
+              let quif = svg.append("g")
+                .call(d3.axisTop(q))
+                .attr("transform", "translate(10,")
+
+              quif.selectAll(".domain")
+                .style("stroke", "purple");
+
+              quif.selectAll("text")
+                // .attr("transform", "translate(-10,0)rotate(-45)")
+                .style("fill", "#9E94A3")
+                .style("font-family", "verdana");
+
+              // Features of the histogram
+              var histogram = d3.histogram()
+                .domain(y.domain())
+                .thresholds(y.ticks(20))    // Important: how many bins approx are going to be made? It is the 'resolution' of the violin plot
+                .value(d => d)
+
+
+              // Compute the binning for each group of the dataset
+              var sumstat = d3.nest()  // nest function allows to group the calculation per level of a factor
+                .key(function (d) { return d.block; })
+                .rollup(function (d) {   // For each key..
+                  input = d.map(function (g) { return g.amount; })    // Keep the variable called Sepal_Length
+                  bins = histogram(input)   // And compute the binning on it.
+                  return (bins)
+                })
+                .entries(beep)
+
+              // What is the biggest number of value in a bin? We need it cause this value will have a width of 100% of the bandwidth.
+              var maxNum = 0
+              for (i in sumstat) {
+                allBins = sumstat[i].value
+                lengths = allBins.map(function (a) { return a.length; })
+                longuest = d3.max(lengths)
+                if (longuest > maxNum) { maxNum = longuest }
+              }
+
+              // The maximum width of a violin must be x.bandwidth = the width dedicated to a group
+              var xNum = d3.scaleLinear()
+                .range([0, x.bandwidth()])
+                .domain([-maxNum, maxNum])
+
+              // Add the shape to this svg!
+              svg
+                .selectAll("myViolin")
+                .data(sumstat)
+                .enter()        // So now we are working group per group
+                .append("g")
+                .attr("transform", function (d) { return ("translate(" + x(d.key) + " ,0)") }) // Translation on the right to be at the group position
+                .append("path")
+                .datum(function (d) { return (d.value) })     // So now we are working bin per bin
+                .style("stroke-width", 3)
+                .style("stroke", "#910857")
+                .style("fill", "#B00B69")
+
+                // .on("mouseover", mouseover) // What to do when hovered
+                // .on("mousemove", mousemove)
+                // .on("mouseleave", mouseleave)
+                .attr("d", d3.area()
+                  .x0(function (d) { return (xNum(-d.length)) })
+                  .x1(function (d) { return (xNum(d.length)) })
+                  .y(function (d) { return (y(d.x0)) })
+                  .curve(d3.curveCatmullRom)    // This makes the line smoother to give the violin appearance. Try d3.curveStep to see the difference
+                )
+
+            }
+
+          </script>
+
+</body>
+
+</html>

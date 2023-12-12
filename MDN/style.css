@@ -1,0 +1,238 @@
+/** Grid system - https://www.w3schools.com/css/css_rwd_grid.asp **/
+* {
+    box-sizing: border-box;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid #a589f7;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/** Image - https://www.w3schools.com/css/css_rwd_grid.asp **/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/** Overflow (for tables) - https://www.w3schools.com/howto/howto_css_table_responsive.asp **/
+.overflow {
+    overflow-x: auto;
+}
+
+.bigboy {
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px; */
+    animation-name: bigboy;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-size:xx-large;
+    font-family: 'consolas';
+    text-align: center;
+}
+
+.pie:hover {
+    animation-name: pie;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    width: auto;
+    height: auto;
+}
+
+@keyframes pie {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(350deg);
+    }
+}
+
+body{
+    background-color: #281f2c;
+}
+.words{
+    color:wheat;
+    font-family: 'consolas';
+}
+
+.label{
+    color:silver;
+    font-family: 'consolas';
+    text-align: center;
+}
+
+@keyframes bigboy {
+    0% {
+        color: blue
+    }
+
+    25% {
+        color: chocolate
+    }
+
+    50% {
+        color: crimson
+    }
+
+    75% {
+        color: green
+    }
+
+    100% {
+        color: yellow
+    }
+}
+
+.thing{
+    align-items: center;
+}
+
+.mama1{
+    float: left;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    clear: both;
+}
+.mama2:before{
+    background-color:#d0007f;
+}
+.mama3:before{
+    background-color:#f2005e;
+}
+.mama4:before{
+    background-color:#ff4b3a;
+
+}
+.mama5:before{
+    background-color:#ff7e00;
+
+}
+.node:hover {
+    stroke-width: 3px !important;
+    opacity: 1 !important;
+  }
+
+  .square1:before {
+    background-color: #98029a;
+  }
+  .box {
+    position: relative;
+    margin-left: 20px;
+  }
+  .box:before{
+    position: absolute;
+    left: -20px;
+    content: "";
+    height:20px;
+    width:20px;
+    margin-bottom:15px;
+    border:1px solid silver;
+  }
+
+  .table, th, td, tr{
+    text-align: center;
+    color:purple;
+    font-family: 'consolas';
+    border: 1px solid;
+  }
+
+.fa-dragon{
+    color: #110019;
+    align-items:center;
+    position:relative;
+    display: inline-block;
+    
+}
+.fa-seedling{
+    color: #F8604B;
+}
+.fa-wheat-awn{
+    color: #F994EB;
+}
+.fa-stroopwafel{
+    color: wheat;
+   
+}
+
+.wowa{
+    
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+}
+
+.boyoboy{
+    margin: auto;
+    padding: 10px;
+    border: 3px solid #281f2c;
+}
